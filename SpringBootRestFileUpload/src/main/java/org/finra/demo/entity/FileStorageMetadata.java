@@ -5,60 +5,58 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class FileStorageMetadata implements Serializable{
 	private static final long serialVersionUID = 8085563971445218359L;
 	@Id
-	@GeneratedValue
-	private Long file_id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long fileId;
 	
 	@Column(nullable = false)
-	private String file_name;
+	private String fileName;
 	
 	@Column(nullable = false)
-	private Long file_size;
+	private Long fileSize;
 	
 	@Column(nullable = false)
-	private String upload_date;
+	private Long uploadDate;
 	
 	@Column
-	private String location = "upload-dir";
-	
-	@Column
-	private Long user_id;
+	private String location;
 
-	public Long getFile_id() {
-		return file_id;
+	public Long getFileId() {
+		return fileId;
 	}
 
-	public void setFile_id(Long file_id) {
-		this.file_id = file_id;
+	public void setFileId(Long fileId) {
+		this.fileId = fileId;
 	}
 
-	public String getFile_name() {
-		return file_name;
+	public String getFileName() {
+		return fileName;
 	}
 
-	public void setFile_name(String file_name) {
-		this.file_name = file_name;
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 
-	public Long getFile_size() {
-		return file_size;
+	public Long getFileSize() {
+		return fileSize;
 	}
 
-	public void setFile_size(Long file_size) {
-		this.file_size = file_size;
+	public void setFileSize(Long fileSize) {
+		this.fileSize = fileSize;
 	}
 
-	public String getUpload_date() {
-		return upload_date;
+	public Long getUploadDate() {
+		return uploadDate;
 	}
 
-	public void setUpload_date(String upload_date) {
-		this.upload_date = upload_date;
+	public void setUploadDate(Long uploadDate) {
+		this.uploadDate = uploadDate;
 	}
 
 	public String getLocation() {
@@ -67,13 +65,5 @@ public class FileStorageMetadata implements Serializable{
 
 	public void setLocation(String location) {
 		this.location = location;
-	}
-
-	public Long getUser_id() {
-		return user_id;
-	}
-
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
 	}
 }
