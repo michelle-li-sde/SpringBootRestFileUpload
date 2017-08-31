@@ -12,7 +12,8 @@ Open your Eclipse -> Import my application as Maven project -> Right click proje
 |GET|**/files/{fileId}**|fileId|find file metadata by fileId|
 ### Test API
 I used Postman to test my Rest services.  
-Open Postman -> Fire a request to http://localhost:8080/ by following my API documentation to test the service. For example:  
+Open Postman -> Fire a request to http://localhost:8080/ by following my API documentation to test the service.  
+For example:  
 * POST http://localhost:8080/files and in Body you need to add **file** as Key (type is File) and **Choose Files** as Value.
 * GET http://localhost:8080/files
 * GET http://localhost:8080/files/1
