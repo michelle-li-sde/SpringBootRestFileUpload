@@ -27,7 +27,7 @@ public class FileUploadController {
 	@PostMapping("/files")
 	public FileStorageMetadata uploadFile(@RequestParam("file") MultipartFile file) {
 		FileStorageMetadata res = fileStorageService.save(file);
-		log.info("Successfully uploaded" + file.getOriginalFilename());
+		log.info("Successfully uploaded " + file.getOriginalFilename());
 		return res;
 	}
 	
