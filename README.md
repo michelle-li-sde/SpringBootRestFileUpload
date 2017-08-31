@@ -1,5 +1,5 @@
 # SpringBootRestFileUpload
-### Task Discription
+### Task Description
 Implemented a Restful API in Spring Boot Application to upload a file with a few meta-data fields. Persisted meta-data in memory DB (Derby) and stored the content on a file system. Performed unit testing using JUnit and Mockito.
 ### Run Application
 I used Eclipse as IDE to develop this file uploading application.  
